@@ -29,10 +29,7 @@ urlpatterns = [
     url(r'^admin/',include(admin.site.urls)),
     url(r'^coures/',CourseView.as_view(), name='courselist'),
     url(r'^register/',include(reg_urls)),
-    url(r'^user/login/$',
-        anonymous_required(auth_views.login),
-        {'template_name': 'signin.html'},
-        name='signin'),
-
+    url(r'^user/login/$',anonymous_required(auth_views.login),{'template_name': 'signin.html'},name='signin'),
+    url(r'^user/logout/$',auth_views.logout,{'template_name': 'logout.html'},name='logout'),
 
 ]
