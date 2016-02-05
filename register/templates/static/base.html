@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Basic Page Needs
+	================================================== -->
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Muniversityportal</title>
+        <meta name="msvalidate.01" content="AACA4869B9C746F7F151D39BF5D19CB2" />
+        <meta name="description" content=" ThinkFOSS aims at providing Open Source training and solutions to Individuals, Schools, Universities and Industries in need. ThinkFOSS is a collection of Open Source enthusiasts and entrepreneurs who are ready to spend their time spreading FOSS technologies">
+        <meta name="keywords" content="thinkfoss, fossatamrita, training, open source, open source solutions">
+        <meta name="author" content="thinkfoss.com">
+
+        <!-- Favicons
+	================================================== -->
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-touch-icon-72x72.png' %}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-touch-icon-114x114.png' %}">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css"  href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+
+
+        <script type="text/javascript" src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+
+
+
+        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+
+        <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-66359518-1', 'auto');
+                ga('send', 'pageview');
+
+        </script>
+        <!--Start of HappyFox Live Chat Script-->
+
+</head>
+<body>
+	<div class="page-wrap">
+		{% block navbar %}
+		{% include 'static/navbar-fixed_top.html' %}
+		{% endblock navbar %}
+		{% block body %}
+
+		{% endblock body %}
+  </div>
+</body>
+</html>

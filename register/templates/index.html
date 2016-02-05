@@ -1,27 +1,13 @@
-<b>Hello World</b>
+{% extends "static/base.html" %}
+{% load staticfiles %}
+{% block body %}
 
-<!doctype html>
-
-
-
-<html>
-
-<head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<meta name="AUTHOR" content="created by Doyle at http://free-templates.org">
-<meta name="KEYWORDS" content="replace, these, words, that, describe, your, site, and, page, contents, separated, by, commas">
-<meta name="DESCRIPTION" content="Here is where you put a short sentence or two describing this page and it's goals">
-<title>Free template #1 provided by www.free-templates.org (replace this title with your own)</title>
-</head>
-
-<body bgcolor="#dkfhdghudgi">
-
+<body imgsrc="home/backdrop.jpg">
 <div align="center">
   <center>
   <table border="1" cellpadding="3" cellspacing="1" width="799" height="76">
     <tr>
-      <td width="786" valign="top" align="center" bgcolor="#70B4D3" height="66"><font size="7" face="Arial" color="#000080">University of Calicut</font></td>
+      <td width="786" valign="top" align="center" bgcolor="#76123waaa" height="66"><font size="7" face="Arial" color="#000080">University of Calicut</font></td>
     </tr>
   </table>
   </center>
@@ -30,8 +16,9 @@
 <centre>
 
     <br align="center"></br>
+  <br></br><br></br><br>
 
-      <button align="center"><a href="{% 'courselist' %}"<b>Staff login</b></button>
+      <button align="center" type="submit" class="btn btn-default"><a href="{% url 'signin' %}"><b>STAFF LOGIN</b></a></button>
 </centre>
 </div>
       <div align="center">
@@ -39,9 +26,9 @@
 
         </center>
       </div>
-
-      <p align="center"><font size="6">Dont have an account <BR>SIGN UP HERE<a href="http://www.bravenet.com?afilid=3813648466" target="_blank">CLICK
-      HERE</a></font></p>
+<br></br><br></br>
+      <p align="center"><font size="6">Dont have an account SIGN UP HERE <a href="{% url 'signup' %}" target="_blank"><button   type="Signup" class="btn btn-default">CLICK
+      HERE</a></button></p>
     </td>
   <center>
       <td width="119" height="524" valign="top" align="center">
@@ -67,6 +54,4 @@
   </center>
 </div>
 
-</body>
-
-</html>
+		{% endblock body %}
